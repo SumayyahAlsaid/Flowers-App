@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Flowers</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="order_flowers">Order Flowers</string>
     <string name="see_menu">See menu</string>
     <string name="order_now">Order now</string>
@@ -15,4 +13,30 @@
     <string name="_24_flowers">24 Flowers</string>
     <string name="_30_flowers">30 Flowers</string>
     <string name="_36_flowers">36 Flowers</string>
+
+    <string name="orchid">Orchid</string>
+    <string name="Tulip">Tulip</string>
+    <string name="Gardenia">Gardenia</string>
+    <string name="Lavender">Lavender</string>
+    <string name="Iris">Iris</string>
+    <string name="damascene">Damascene</string>
+
+    <string name="next">Next</string>
+    <string name="send">Send Order</string>
+    <string name="quantity">Quantity</string>
+    <string name="pickup_date">Pickup date</string>
+    <string name="total_price">Total\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t%s</string>
+    <string name="type">Type</string>
+
+    <string name="subtotal_price">Subtotal\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t%s</string>
+    <string name="Flowers_Menu">Flowers Menu</string>
+    <string name="fragment_number_flowers">Number Flowers</string>
+    <string name="Type_Fragment">Type Flowers</string>
+    <string name="pickup">Delivery Date</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="choose_num_flowers">Choose the number of flowers you want in the bouquet:</string>
+    <string name="choose_type_flowers">Choose type of flowers you want in the bouquet:</string>
+    <string name="choose_date_flowers">Choose the date you want to receive the bouquet:</string>
+    <string name="check_order">Check your request and then choose SEND to be executed:</string>
+
 </resources>

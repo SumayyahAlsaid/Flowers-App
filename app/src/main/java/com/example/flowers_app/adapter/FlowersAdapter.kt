@@ -25,7 +25,8 @@ class FlowersAdapter(private val dataset: List<FlowerMenu>, private val context:
 
     override fun onBindViewHolder(holder: FlowersViewHolder, position: Int) {
         val item = dataset[position]
-        holder.textView.text = (context?.resources?.getString(item.flowerStringId) ?: holder.imageView.setImageResource(item.flowerImageId)) as CharSequence?
+        holder.textView.text = context!!.resources.getString(item.flowerStringId)
+        holder.imageView.setImageResource(item.flowerImageId)
     }
 
     override fun getItemCount() = dataset.size

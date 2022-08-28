@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.SummaryFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.flowers_app.model.OrderViewModel" />
+
+        <variable
+            name="summaryFragment"
+            type="com.example.flowers_app.ui.SummaryFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="230dp"
+                android:layout_height="200dp"
+                android:src="@drawable/summary"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="273dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/tajawal_bold"
+                android:gravity="center"
+                android:text="@string/check_order"
+                android:textSize="20sp" />
+
+          <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/quantity_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/tajawal_extrabold"
+                            android:text="@string/quantity"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/tajawal_medium"
+                            android:textSize="16sp"
+                            android:text="@{viewModel.quantity.toString()}"
+                            tools:text="6 flowers" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/gray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/type_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/tajawal_extrabold"
+                            android:text="@string/type"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/tajawal_medium"
+                            android:textSize="16sp"
+                            android:text="@{viewModel.type}"
+                            tools:text="Chocolate" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/gray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/pickup_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:fontFamily="@font/tajawal_extrabold"
+                            android:text="@string/pickup_date"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/tajawal_medium"
+                            android:textSize="16sp"
+                            android:text="@{viewModel.date}"
+                            tools:text="Sunday" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/secondaryColor"/>
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{@string/total_price(viewModel.price)}"
+                        android:background="@color/secondaryColor"
+                        android:paddingVertical="6dp"
+                        android:fontFamily="@font/tajawal_bold"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        tools:text="Total $5.00" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> summaryFragment.sendOrder()}"
+                android:layout_marginTop="16dp"
+                android:text="@string/send" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

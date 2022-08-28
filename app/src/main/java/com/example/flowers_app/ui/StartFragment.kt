@@ -3,6 +3,7 @@ package com.example.flowers_app.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.ContactsContract
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -46,8 +47,8 @@ class StartFragment : Fragment() {
 
     fun showPhoneNumber(){
         val phoneNumber = +966342974532
-        val intent = Intent(Intent.ACTION_CALL)
-        intent.data = Uri.parse("tel:$phoneNumber")
+        val intent = Intent(Intent.ACTION_DIAL)
+        intent.data = Uri.parse("tel:" +phoneNumber)
         startActivity(intent)
     }
 

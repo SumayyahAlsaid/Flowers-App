@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.flowers_app.ui.StartFragment"
-        android:label="fragment_start"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_startFragment_to_flowersMenuFragment"
@@ -20,11 +20,41 @@
     <fragment
         android:id="@+id/flowersMenuFragment"
         android:name="com.example.flowers_app.ui.FlowersMenuFragment"
-        android:label="fragment_flowers_menu"
+        android:label="@string/Flowers_Menu"
         tools:layout="@layout/fragment_flowers_menu" />
     <fragment
         android:id="@+id/numberFlowersFragment"
         android:name="com.example.flowers_app.ui.NumberFlowersFragment"
-        android:label="fragment_number_flowers"
-        tools:layout="@layout/fragment_number_flowers" />
+        android:label="@string/fragment_number_flowers"
+        tools:layout="@layout/fragment_number_flowers" >
+        <action
+            android:id="@+id/action_numberFlowersFragment_to_typeFragment"
+            app:destination="@id/typeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="com.example.flowers_app.ui.TypeFragment"
+        android:label="@string/Type_Fragment" >
+        <action
+            android:id="@+id/action_typeFragment_to_pickupFragment"
+            app:destination="@id/pickupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.flowers_app.ui.SummaryFragment"
+        android:label="@string/order_summary"
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_summaryFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickupFragment"
+        android:name="com.example.flowers_app.ui.PickupFragment"
+        android:label="@string/pickup"
+        tools:layout="@layout/fragment_pickup" >
+        <action
+            android:id="@+id/action_pickupFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+    </fragment>
 </navigation>

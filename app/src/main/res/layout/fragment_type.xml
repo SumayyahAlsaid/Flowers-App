@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".ui.TypeFragment">
+
+<data>
+    <variable
+        name="viewModel"
+        type="com.example.flowers_app.model.OrderViewModel" />
+
+    <variable
+        name="TypeFragment"
+        type="com.example.flowers_app.ui.TypeFragment" />
+</data>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="200dp"
+            android:src="@drawable/type"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center"
+            android:text="@string/choose_type_flowers"
+            android:textSize="20sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardCornerRadius="8dp">
+
+                <RadioGroup
+                    android:id="@+id/type_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/orchid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="@{viewModel.type.equals(@string/orchid)}"
+                        android:onClick="@{() -> viewModel.setType(@string/orchid)}"
+                        android:text="@string/orchid" />
+
+                    <RadioButton
+                        android:id="@+id/Tulip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="@{viewModel.type.equals(@string/Tulip)}"
+                        android:onClick="@{() -> viewModel.setType(@string/Tulip)}"
+                        android:text="@string/Tulip" />
+
+
+                    <RadioButton
+                        android:id="@+id/Gardenia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="@{viewModel.type.equals(@string/Gardenia)}"
+                        android:onClick="@{() -> viewModel.setType(@string/Gardenia)}"
+                        android:text="@string/Gardenia" />
+
+                    <RadioButton
+                        android:id="@+id/Lavender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="@{viewModel.type.equals(@string/Lavender)}"
+                        android:onClick="@{() -> viewModel.setType(@string/Lavender)}"
+                        android:text="@string/Lavender" />
+
+                    <RadioButton
+                        android:id="@+id/Iris"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="@{viewModel.type.equals(@string/Iris)}"
+                        android:onClick="@{() -> viewModel.setType(@string/Iris)}"
+                        android:text="@string/Iris" />
+                    <RadioButton
+                        android:id="@+id/damascene"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="@{viewModel.type.equals(@string/damascene)}"
+                        android:onClick="@{() -> viewModel.setType(@string/damascene)}"
+                        android:text="@string/damascene" />
+
+
+                </RadioGroup>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/subtotal_price(viewModel.price)}"
+            android:background="@color/secondaryColor"
+            android:paddingVertical="6dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            tools:text="Subtotal $5.00" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> TypeFragment.goToNextScreen()}"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+    </LinearLayout>
+</ScrollView>
+</layout>

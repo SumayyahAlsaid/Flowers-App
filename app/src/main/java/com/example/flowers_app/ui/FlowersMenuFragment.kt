@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.flowers_app.adapter.FlowersAdapter
 import com.example.flowers_app.data.Datasource
 import com.example.flowers_app.databinding.FragmentFlowersMenuBinding
-import com.example.flowers_app.databinding.FragmentNumberFlowersBinding
+
 
 class FlowersMenuFragment() : Fragment() {
 
@@ -32,7 +32,8 @@ class FlowersMenuFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.rvFlowerMenu
         recyclerView.adapter = FlowersAdapter(Datasource().loadFlowers(),context)
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,true)
+
     }
 
 
