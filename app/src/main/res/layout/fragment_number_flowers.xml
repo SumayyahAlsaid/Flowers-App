@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".ui.NumberFlowersFragment">
+
+<data>
+    <variable
+        name="NumberFlowersFragment"
+        type="com.example.flowers_app.ui.NumberFlowersFragment" />
+</data>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="2"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/bt_order_10_flower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> NumberFlowersFragment.orderFlowers(10)}"
+            android:text="@string/_10_flowers" />
+
+        <Button
+            android:id="@+id/bt_order_12_flower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> NumberFlowersFragment.orderFlowers(12)}"
+            android:text="@string/_12_flowers" />
+
+        <Button
+            android:id="@+id/bt_order_18_flower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> NumberFlowersFragment.orderFlowers(18)}"
+            android:text="@string/_18_flowers" />
+
+        <Button
+            android:id="@+id/bt_order_24_flower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> NumberFlowersFragment.orderFlowers(24)}"
+            android:text="@string/_24_flowers" />
+
+        <Button
+            android:id="@+id/bt_order_30_flower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> NumberFlowersFragment.orderFlowers(30)}"
+            android:text="@string/_30_flowers" />
+
+        <Button
+            android:id="@+id/bt_order_36_flower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> NumberFlowersFragment.orderFlowers(36)}"
+            android:text="@string/_36_flowers" />
+
+
+
+    </GridLayout>
+
+</ScrollView>
+</layout>

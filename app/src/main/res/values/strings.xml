@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Flowers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="order_flowers">Order Flowers</string>
+    <string name="see_menu">See menu</string>
+    <string name="order_now">Order now</string>
+    <string name="contact_us">Contact Us |</string>
+
+    <string name="orchid_flower">Orchid Flower</string>
+    <string name="one_flower_price">One flower price: 3$</string>
+    <string name="_10_flowers">10 Flowers</string>
+    <string name="_12_flowers">12 Flowers</string>
+    <string name="_18_flowers">18 Flowers</string>
+    <string name="_24_flowers">24 Flowers</string>
+    <string name="_30_flowers">30 Flowers</string>
+    <string name="_36_flowers">36 Flowers</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.flowers_app.ui.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_flowersMenuFragment"
+            app:destination="@id/flowersMenuFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_numberFlowersFragment"
+            app:destination="@id/numberFlowersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flowersMenuFragment"
+        android:name="com.example.flowers_app.ui.FlowersMenuFragment"
+        android:label="fragment_flowers_menu"
+        tools:layout="@layout/fragment_flowers_menu" />
+    <fragment
+        android:id="@+id/numberFlowersFragment"
+        android:name="com.example.flowers_app.ui.NumberFlowersFragment"
+        android:label="fragment_number_flowers"
+        tools:layout="@layout/fragment_number_flowers" />
+</navigation>
